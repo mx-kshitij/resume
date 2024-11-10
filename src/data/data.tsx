@@ -14,19 +14,25 @@ import LinkedInIcon from '../components/Icon/LinkedInIcon';
 // import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 // import TwitterIcon from '../components/Icon/TwitterIcon';
 import heroImage from '../images/page-background.jpg';
-import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
-import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
-import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
-import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
-import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
-import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
-import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
-import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
-import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
-import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
-import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
+import porfolioImage6 from '../images/portfolio/apollo_graphql.png';
+import porfolioImage9 from '../images/portfolio/bottomsheet.png';
+import porfolioImage14 from '../images/portfolio/calendar.jpg';
+import porfolioImage8 from '../images/portfolio/carousel.png';
+import porfolioImage7 from '../images/portfolio/datepicker.png';
+import porfolioImage5 from '../images/portfolio/dropdown.jpg';
+import porfolioImage2 from '../images/portfolio/echarts.png';
+import porfolioImage1 from '../images/portfolio/filedropper.png';
+import porfolioImage15 from '../images/portfolio/messaging.webp';
+import porfolioImage11 from '../images/portfolio/native testing.jpg';
+import porfolioImage10 from '../images/portfolio/parallax.png';
+import porfolioImage13 from '../images/portfolio/postit.jpg';
+import porfolioImage16 from '../images/portfolio/progress.jpg';
+import porfolioImage4 from '../images/portfolio/snackbar.png';
+import porfolioImage3 from '../images/portfolio/statusbar.png';
+import porfolioImage12 from '../images/portfolio/victory.png';
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
+import Pdf from './assets/resume.pdf';
 import {
   About,
   ContactSection,
@@ -39,14 +45,13 @@ import {
   TestimonialSection,
   TimelineItem,
 } from './dataDef';
-import Pdf from './assets/resume.pdf';
 
 /**
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
   title: 'Kshitij Karandikar',
-  description: "Welcome! Here you can find my resume and personal projects",
+  description: 'Welcome! Here you can find my resume and personal projects',
 };
 
 /**
@@ -89,7 +94,7 @@ export const heroData: Hero = {
       href: Pdf,
       text: 'Resume',
       primary: true,
-      Icon: ArrowDownTrayIcon
+      Icon: ArrowDownTrayIcon,
     },
     {
       href: `#${SectionId.Contact}`,
@@ -169,44 +174,10 @@ export const skills: SkillGroup[] = [
       },
       {
         name: 'Dutch',
-        level: 5
-      }
+        level: 5,
+      },
     ],
   },
-  // {
-  //   name: 'Backend development',
-  //   skills: [
-  //     {
-  //       name: 'Node.js',
-  //       level: 8,
-  //     },
-  //     {
-  //       name: 'Rust',
-  //       level: 5,
-  //     },
-  //     {
-  //       name: 'Golang',
-  //       level: 4,
-  //     },
-  //   ],
-  // },
-  // {
-  //   name: 'Mobile development',
-  //   skills: [
-  //     {
-  //       name: 'React Native',
-  //       level: 9,
-  //     },
-  //     {
-  //       name: 'Flutter',
-  //       level: 4,
-  //     },
-  //     {
-  //       name: 'Swift',
-  //       level: 3,
-  //     },
-    // ],
-  // },
 ];
 
 /**
@@ -214,70 +185,100 @@ export const skills: SkillGroup[] = [
  */
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'Project title 1',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'React file dropper',
+    description: 'A react based file dropper for Mendix apps',
+    url: 'https://marketplace.mendix.com/link/component/229507',
     image: porfolioImage1,
   },
   {
-    title: 'Project title 2',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Apache e-charts',
+    description: 'A javascript based apache e-charts module which is plug and play',
+    url: 'https://marketplace.mendix.com/link/component/119979',
     image: porfolioImage2,
   },
   {
-    title: 'Project title 3',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Native Status bar',
+    description: 'A react native widget to customize the status bar for your mendix native app',
+    url: 'https://marketplace.mendix.com/link/component/216567',
     image: porfolioImage3,
   },
   {
-    title: 'Project title 4',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Native snack bar',
+    description: 'A module to use display a native snack bar in your mendix native apps',
+    url: 'https://marketplace.mendix.com/link/component/216175',
     image: porfolioImage4,
   },
   {
-    title: 'Project title 5',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Customizable drop down',
+    description: 'A react based fully customizable drop down widget for advanced developers',
+    url: 'https://marketplace.mendix.com/link/component/203058',
     image: porfolioImage5,
   },
   {
-    title: 'Project title 6',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Apollo GraphQL',
+    description: 'A plug and play module to add GraphQL functionality to your mendix app',
+    url: 'https://marketplace.mendix.com/link/component/210575',
     image: porfolioImage6,
   },
   {
-    title: 'Project title 7',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'React datepicker',
+    description: 'A react based fully customizable date picker.',
+    url: 'https://marketplace.mendix.com/link/component/202978',
     image: porfolioImage7,
   },
   {
-    title: 'Project title 8',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'React Carousel',
+    description: 'A react based carousel for your mendix app',
+    url: 'https://marketplace.mendix.com/link/component/205981',
     image: porfolioImage8,
   },
   {
-    title: 'Project title 9',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'React native bottomsheet',
+    description: 'A react native widget to have a fully customizable bottom sheet in your mendix native app.',
+    url: 'https://marketplace.mendix.com/link/component/120121',
     image: porfolioImage9,
   },
   {
-    title: 'Project title 10',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'React native parallax',
+    description: 'A react native widget to add parallax effect on a page in your mendix native app.',
+    url: 'https://marketplace.mendix.com/link/component/120093',
     image: porfolioImage10,
   },
   {
-    title: 'Project title 11',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'React native testing',
+    description: 'A framework for automated testing of mendix native app',
+    url: 'https://github.com/mx-kshitij/mx-native-testing-appium',
     image: porfolioImage11,
+  },
+  {
+    title: 'Native victory charts',
+    description: 'A native widget to use Victory charts in your mendix native app',
+    url: 'https://github.com/mx-kshitij/customVictoryLineChart',
+    image: porfolioImage12,
+  },
+  {
+    title: 'Web postits',
+    description: 'A pluggable web widget to use postit notes in your app',
+    url: 'https://github.com/mx-kshitij/mx-web-ImagePostIt',
+    image: porfolioImage13,
+  },
+  {
+    title: 'React calendar',
+    description: 'A pluggable web widget to use a calendar in your mendix app',
+    url: 'https://github.com/mx-kshitij/mx-web-react-calendar',
+    image: porfolioImage14,
+  },
+  {
+    title: 'React native messaging',
+    description: 'A native widget to add messaging view on a page in your native mendix app',
+    url: 'https://github.com/mx-kshitij/customizableMessagingView',
+    image: porfolioImage15,
+  },
+  {
+    title: 'Segmented progress bar',
+    description: 'A native widget to add a segmented progress bar in your mendix native app',
+    url: 'https://github.com/mendixlabs/mendix-native-segmented-progressbar',
+    image: porfolioImage16,
   },
 ];
 
@@ -289,13 +290,20 @@ export const education: TimelineItem[] = [
     date: '2016',
     location: 'Symbiosis Institute of Business Management, Pune, India',
     title: 'Post graduate diploma in Innovation and Corporate Entrepreneurship',
-    content: <p>This course imbued me with skills in creativity, strategic thinking, and business model innovation. </p>,
+    content: (
+      <p>This course imbued me with skills in creativity, strategic thinking, and business model innovation. </p>
+    ),
   },
   {
     date: '2014',
     location: 'Institute of Technology and Management (ITM), Gwalior, India',
     title: 'Bachelor of Engineering (Mechanical)',
-    content: <p>This program honed my technical skills, critical thinking, and soft skills, providing a strong foundation in engineering principles and problem-solving.</p>,
+    content: (
+      <p>
+        This program honed my technical skills, critical thinking, and soft skills, providing a strong foundation in
+        engineering principles and problem-solving.
+      </p>
+    ),
   },
 ];
 
@@ -306,7 +314,8 @@ export const experience: TimelineItem[] = [
     title: 'Technical Architect',
     content: (
       <p>
-        Architecting and developing scalable, reusable, secure and high performance solutions using Mendix, React, Java, React native, etc.
+        Architecting and developing scalable, reusable, secure and high performance solutions using Mendix, React, Java,
+        React native, etc.
       </p>
     ),
   },
@@ -316,7 +325,8 @@ export const experience: TimelineItem[] = [
     title: 'Mendix Consultant',
     content: (
       <p>
-        End to end app development with high quality and reliability using Mendix and customized components using JavaScript and Java.
+        End to end app development with high quality and reliability using Mendix and customized components using
+        JavaScript and Java.
       </p>
     ),
   },
@@ -324,11 +334,7 @@ export const experience: TimelineItem[] = [
     date: 'Sept 2014 - Sept 2019',
     location: 'Infosys Ltd.',
     title: 'Senior Systems Engineer',
-    content: (
-      <p>
-        DevOps app development and maintenance using IBM Notes (Lotus Notes) and Mendix.
-      </p>
-    ),
+    content: <p>DevOps app development and maintenance using IBM Notes (Lotus Notes) and Mendix.</p>,
   },
 ];
 
