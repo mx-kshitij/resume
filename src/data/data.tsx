@@ -1,5 +1,5 @@
 import {
-  AcademicCapIcon,
+  // AcademicCapIcon,
   ArrowDownTrayIcon,
   BuildingOffice2Icon,
   CalendarIcon,
@@ -9,11 +9,11 @@ import {
 } from '@heroicons/react/24/outline';
 
 import GithubIcon from '../components/Icon/GithubIcon';
-import InstagramIcon from '../components/Icon/InstagramIcon';
+// import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
-import TwitterIcon from '../components/Icon/TwitterIcon';
-import heroImage from '../images/header-background.webp';
+// import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
+// import TwitterIcon from '../components/Icon/TwitterIcon';
+import heroImage from '../images/page-background.jpg';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
 import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
@@ -39,13 +39,14 @@ import {
   TestimonialSection,
   TimelineItem,
 } from './dataDef';
+import Pdf from './assets/resume.pdf';
 
 /**
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: "Example site built with Tim Baker's react resume template",
+  title: 'Kshitij Karandikar',
+  description: "Welcome! Here you can find my resume and personal projects",
 };
 
 /**
@@ -69,27 +70,26 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `Kshitij Karandikar`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
-      </p>
-      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        <strong className="text-stone-100">Technical Architect</strong> with over{' '}
+        <strong className="text-stone-100">10 years of expertise</strong> in end-to-end solution design, technical
+        architecture, and application development. Highly skilled in{' '}
+        <strong className="text-stone-100">Mendix, React, Java, and cloud solutions</strong>, with a track record of
+        developing reusable, scalable solutions that enhance client satisfaction and reduce development time. Proven
+        ability to lead teams, optimize CI/CD processes, and deliver innovative, high-performance applications across
+        web, native, and PWA platforms.
       </p>
     </>
   ),
   actions: [
     {
-      href: '/assets/resume.pdf',
+      href: Pdf,
       text: 'Resume',
       primary: true,
-      Icon: ArrowDownTrayIcon,
+      Icon: ArrowDownTrayIcon
     },
     {
       href: `#${SectionId.Contact}`,
@@ -104,16 +104,14 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description: `Technical Architect specializing in Mendix, React, Java and cloud tech, with a passion for travel, world cinema, photography, and emerging technologies.`,
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    {label: 'Location', text: 'Amsterdam, NL', Icon: MapIcon},
+    {label: 'Age', text: '32', Icon: CalendarIcon},
+    {label: 'Nationality', text: 'Indian', Icon: FlagIcon},
+    {label: 'Employment', text: 'Mendix B.V.', Icon: BuildingOffice2Icon},
+    {label: 'Interests', text: 'Travelling, Photography, Gaming', Icon: SparklesIcon},
+    // {label: 'Study', text: 'Bachelor of Engineering', Icon: AcademicCapIcon},
   ],
 };
 
@@ -122,73 +120,93 @@ export const aboutData: About = {
  */
 export const skills: SkillGroup[] = [
   {
+    name: 'Development',
+    skills: [
+      {
+        name: 'Mendix',
+        level: 10,
+      },
+      {
+        name: 'React / React native',
+        level: 8,
+      },
+      {
+        name: 'Java',
+        level: 8,
+      },
+      {
+        name: 'HTML & CSS',
+        level: 8,
+      },
+      {
+        name: 'SQL',
+        level: 7,
+      },
+      {
+        name: 'Kubernetes / Docker',
+        level: 5,
+      },
+      {
+        name: 'Azure / AWS / GCS',
+        level: 5,
+      },
+    ],
+  },
+  {
     name: 'Spoken languages',
     skills: [
       {
         name: 'English',
-        level: 10,
-      },
-      {
-        name: 'French',
-        level: 4,
-      },
-      {
-        name: 'Spanish',
-        level: 3,
-      },
-    ],
-  },
-  {
-    name: 'Frontend development',
-    skills: [
-      {
-        name: 'React',
         level: 9,
       },
       {
-        name: 'Typescript',
-        level: 7,
+        name: 'Hindi',
+        level: 9,
       },
       {
-        name: 'GraphQL',
-        level: 6,
-      },
-    ],
-  },
-  {
-    name: 'Backend development',
-    skills: [
-      {
-        name: 'Node.js',
-        level: 8,
-      },
-      {
-        name: 'Rust',
+        name: 'Marathi',
         level: 5,
       },
       {
-        name: 'Golang',
-        level: 4,
-      },
+        name: 'Dutch',
+        level: 5
+      }
     ],
   },
-  {
-    name: 'Mobile development',
-    skills: [
-      {
-        name: 'React Native',
-        level: 9,
-      },
-      {
-        name: 'Flutter',
-        level: 4,
-      },
-      {
-        name: 'Swift',
-        level: 3,
-      },
-    ],
-  },
+  // {
+  //   name: 'Backend development',
+  //   skills: [
+  //     {
+  //       name: 'Node.js',
+  //       level: 8,
+  //     },
+  //     {
+  //       name: 'Rust',
+  //       level: 5,
+  //     },
+  //     {
+  //       name: 'Golang',
+  //       level: 4,
+  //     },
+  //   ],
+  // },
+  // {
+  //   name: 'Mobile development',
+  //   skills: [
+  //     {
+  //       name: 'React Native',
+  //       level: 9,
+  //     },
+  //     {
+  //       name: 'Flutter',
+  //       level: 4,
+  //     },
+  //     {
+  //       name: 'Swift',
+  //       level: 3,
+  //     },
+    // ],
+  // },
 ];
 
 /**
@@ -268,39 +286,47 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: '2016',
+    location: 'Symbiosis Institute of Business Management, Pune, India',
+    title: 'Post graduate diploma in Innovation and Corporate Entrepreneurship',
+    content: <p>This course imbued me with skills in creativity, strategic thinking, and business model innovation. </p>,
   },
   {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: '2014',
+    location: 'Institute of Technology and Management (ITM), Gwalior, India',
+    title: 'Bachelor of Engineering (Mechanical)',
+    content: <p>This program honed my technical skills, critical thinking, and soft skills, providing a strong foundation in engineering principles and problem-solving.</p>,
   },
 ];
 
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
+    date: 'July 2021 - Present',
+    location: 'Mendix B.V.',
+    title: 'Technical Architect',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        Architecting and developing scalable, reusable, secure and high performance solutions using Mendix, React, Java, React native, etc.
       </p>
     ),
   },
   {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
+    date: 'Sept 2019 - July 2021',
+    location: 'Clevr B.V. (Formerly Mansystems B.V.)',
+    title: 'Mendix Consultant',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        End to end app development with high quality and reliability using Mendix and customized components using JavaScript and Java.
+      </p>
+    ),
+  },
+  {
+    date: 'Sept 2014 - Sept 2019',
+    location: 'Infosys Ltd.',
+    title: 'Senior Systems Engineer',
+    content: (
+      <p>
+        DevOps app development and maintenance using IBM Notes (Lotus Notes) and Mendix.
       </p>
     ),
   },
@@ -340,23 +366,28 @@ export const contact: ContactSection = {
   items: [
     {
       type: ContactType.Email,
-      text: 'reachout@timbaker.me',
-      href: 'mailto:reachout@timbaker.me',
+      text: 'kshitijkarandikar@gmail.com',
+      href: 'mailto:kshitijkarandikar@gmail.com',
     },
     {
       type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
+      text: 'Amsterdam, NL',
+      href: 'https://www.google.com/maps/place/Amsterdam,+Netherlands/@52.3547418,4.8215604,12z',
     },
     {
       type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
+      text: '@yourbucketlistguy',
+      href: 'https://www.instagram.com/yourbucketlistguy',
     },
     {
       type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
+      text: 'mx-kshitij ',
+      href: 'https://github.com/mx-kshitij',
+    },
+    {
+      type: ContactType.LinkedIn,
+      text: 'kshitijkarandikar',
+      href: 'https://www.linkedin.com/in/kshitijkarandikar/',
     },
   ],
 };
@@ -365,9 +396,9 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/reactresume/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/mx-kshitij'},
+  // {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/kshitijkarandikar/'},
+  // {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/yourbucketlistguy'},
+  // {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
 ];

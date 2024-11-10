@@ -13,6 +13,15 @@ const nextConfig = {
       rule.include = undefined;
     });
 
+    // Add rule to handle .pdf files
+    config.module.rules.push({
+      test: /\.pdf$/,
+      type: 'asset/resource', // or 'file-loader' if using older webpack
+      generator: {
+        filename: 'static/media/[name].[hash][ext]',
+      },
+    });
+
     return config;
   },
   compress: true,
